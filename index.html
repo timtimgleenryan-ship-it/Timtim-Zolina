@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accessible recipe website following WCAG Perceivable principles">
+    <title>Accessible Recipes | Delicious & Easy Meals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="site-header" role="banner">
+        <div class="container">
+            <h1>Accessible Recipes</h1>
+            <p class="tagline">Delicious meals for everyone</p>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#featured-recipe" class="nav-link">Featured Recipe</a></li>
+                    <li><a href="#ingredients" class="nav-link">Ingredients</a></li>
+                    <li><a href="#instructions" class="nav-link">Instructions</a></li>
+                    <li><a href="#nutrition" class="nav-link">Nutrition</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="main-content">
+        <article class="recipe" itemscope itemtype="https://schema.org/Recipe">
+            <header class="recipe-header">
+                <div class="container">
+                    <h2 id="featured-recipe" class="recipe-title" itemprop="name">Classic Spaghetti Carbonara</h2>
+                    <div class="recipe-meta">
+                        <span class="prep-time" itemprop="prepTime" content="PT15M">Prep: 15 min</span>
+                        <span class="cook-time" itemprop="cookTime" content="PT15M">Cook: 15 min</span>
+                        <span class="servings" itemprop="recipeYield">Servings: 4</span>
+                    </div>
+                    <figure class="recipe-image">
+                        <img src="Carbonara.jpg.webp" 
+                             alt="A plate of spaghetti carbonara with parmesan and parsley garnish" 
+                             class="recipe-img"
+                             loading="lazy"
+                             decoding="async"
+                             itemprop="image">
+                        <figcaption>Classic Spaghetti Carbonara with fresh parsley</figcaption>
+                    </figure>
+                </div>
+            </header>
+
+            <section id="ingredients" class="recipe-section">
+                <div class="container">
+                    <h3>Ingredients</h3>
+                    <ul class="ingredients-list" aria-label="Ingredients list">
+                        <li class="ingredient" itemprop="recipeIngredient">
+                            <span class="ingredient-amount">400g</span>
+                            <span class="ingredient-name">spaghetti</span>
+                        </li>
+                        <li class="ingredient" itemprop="recipeIngredient">
+                            <span class="ingredient-amount">200g</span>
+                            <span class="ingredient-name">pancetta or guanciale, diced</span>
+                        </li>
+                        <li class="ingredient" itemprop="recipeIngredient">
+                            <span class="ingredient-amount">4</span>
+                            <span class="ingredient-name">large eggs</span>
+                        </li>
+                        <li class="ingredient" itemprop="recipeIngredient">
+                            <span class="ingredient-amount">50g</span>
+                            <span class="ingredient-name">pecorino cheese, grated</span>
+                        </li>
+                        <li class="ingredient" itemprop="recipeIngredient">
+                            <span class="ingredient-amount">50g</span>
+                            <span class="ingredient-name">parmesan, grated</span>
+                        </li>
+                        <li class="ingredient" itemprop="recipeIngredient">
+                            <span class="ingredient-amount">2</span>
+                            <span class="ingredient-name">garlic cloves, crushed</span>
+                        </li>
+                        <li class="ingredient" itemprop="recipeIngredient">
+                            <span class="ingredient-amount">to taste</span>
+                            <span class="ingredient-name">black pepper</span>
+                        </li>
+                        <li class="ingredient" itemprop="recipeIngredient">
+                            <span class="ingredient-amount">to taste</span>
+                            <span class="ingredient-name">salt</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="instructions" class="recipe-section">
+                <div class="container">
+                    <h3>Instructions</h3>
+                    <ol class="instructions-list" aria-label="Cooking instructions">
+                        <li class="instruction" itemprop="recipeInstructions">
+                            <span class="instruction-step">1.</span>
+                            <div class="instruction-text">
+                                <p>Bring a large pot of salted water to boil and cook the spaghetti according to package instructions until al dente.</p>
+                            </div>
+                        </li>
+                        <li class="instruction" itemprop="recipeInstructions">
+                            <span class="instruction-step">2.</span>
+                            <div class="instruction-text">
+                                <p>While the pasta is cooking, fry the pancetta in a large pan over medium heat until crispy. Add the garlic and cook for 1 minute until fragrant, then remove from heat.</p>
+                            </div>
+                        </li>
+                        <li class="instruction" itemprop="recipeInstructions">
+                            <span class="instruction-step">3.</span>
+                            <div class="instruction-text">
+                                <p>In a bowl, whisk together the eggs, grated cheeses, and a generous amount of black pepper.</p>
+                            </div>
+                        </li>
+                        <li class="instruction" itemprop="recipeInstructions">
+                            <span class="instruction-step">4.</span>
+                            <div class="instruction-text">
+                                <p>When the pasta is done, reserve a cup of the pasta water, then drain the pasta and add it to the pan with the pancetta.</p>
+                            </div>
+                        </li>
+                        <li class="instruction" itemprop="recipeInstructions">
+                            <span class="instruction-step">5.</span>
+                            <div class="instruction-text">
+                                <p>Remove the pan from heat and quickly stir in the egg and cheese mixture, tossing continuously. Add a splash of the reserved pasta water to create a creamy sauce.</p>
+                            </div>
+                        </li>
+                        <li class="instruction" itemprop="recipeInstructions">
+                            <span class="instruction-step">6.</span>
+                            <div class="instruction-text">
+                                <p>Season with salt and additional pepper to taste. Serve immediately with extra grated cheese on top.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="nutrition" class="recipe-section">
+                <div class="container">
+                    <h3>Nutrition Information</h3>
+                    <div class="nutrition-info" itemscope itemtype="https://schema.org/NutritionInformation">
+                        <p>Per serving (approximate):</p>
+                        <ul class="nutrition-facts">
+                            <li><span class="nutrition-label">Calories:</span> <span itemprop="calories">750</span>kcal</li>
+                            <li><span class="nutrition-label">Carbohydrates:</span> <span itemprop="carbohydrateContent">75g</span></li>
+                            <li><span class="nutrition-label">Protein:</span> <span itemprop="proteinContent">32g</span></li>
+                            <li><span class="nutrition-label">Fat:</span> <span itemprop="fatContent">32g</span></li>
+                            <li><span class="nutrition-label">Saturated Fat:</span> <span itemprop="saturatedFatContent">12g</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 Accessible Recipes. All rights reserved.</p>
+           
+            <button id="high-contrast" class="accessibility-toggle" aria-pressed="false">
+                <span class="sr-only">Toggle high contrast mode</span>
+                <span aria-hidden="true">🌓</span>
+            </button>
+            <button id="font-size" class="accessibility-toggle" aria-pressed="false">
+                <span class="sr-only">Toggle large font size</span>
+                <span aria-hidden="true">A+</span>
+            </button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
